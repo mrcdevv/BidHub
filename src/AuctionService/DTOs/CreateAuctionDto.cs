@@ -6,26 +6,26 @@ public class CreateAuctionDto
 {
   [Required]
   public string Make { get; set; }
-  [Required]
 
+  [Required]
   public string Model { get; set; }
-  [Required]
 
+  [Required]
   public string Color { get; set; }
-  [Required]
 
+  [Required]
   public int Mileage { get; set; }
-  [Required]
 
+  [Required]
   public int Year { get; set; }
-  [Required]
 
+  [Required]
   public int ReservePrice { get; set; }
-  [Required]
 
+  [Required]
   public string ImageUrl { get; set; }
-  [Required]
 
+  [Required]
   public DateTime AuctionEnd { get; set; }
 
 }
