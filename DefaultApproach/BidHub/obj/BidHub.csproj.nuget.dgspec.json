@@ -1,31 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mrc\\dev\\CursoBackend-Microservices\\BidHub\\BidHub\\BidHub.csproj": {}
+    "C:\\Users\\mrc\\dev\\CursoBackend-Microservices\\BidHub\\DefaultApproach\\BidHub\\BidHub.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mrc\\dev\\CursoBackend-Microservices\\BidHub\\BidHub\\BidHub.csproj": {
+    "C:\\Users\\mrc\\dev\\CursoBackend-Microservices\\BidHub\\DefaultApproach\\BidHub\\BidHub.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mrc\\dev\\CursoBackend-Microservices\\BidHub\\BidHub\\BidHub.csproj",
+        "projectUniqueName": "C:\\Users\\mrc\\dev\\CursoBackend-Microservices\\BidHub\\DefaultApproach\\BidHub\\BidHub.csproj",
         "projectName": "BidHub",
-        "projectPath": "C:\\Users\\mrc\\dev\\CursoBackend-Microservices\\BidHub\\BidHub\\BidHub.csproj",
+        "projectPath": "C:\\Users\\mrc\\dev\\CursoBackend-Microservices\\BidHub\\DefaultApproach\\BidHub\\BidHub.csproj",
         "packagesPath": "C:\\Users\\mrc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mrc\\dev\\CursoBackend-Microservices\\BidHub\\BidHub\\obj\\",
+        "outputPath": "C:\\Users\\mrc\\dev\\CursoBackend-Microservices\\BidHub\\DefaultApproach\\BidHub\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\mrc\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\mrc\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -72,7 +66,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.404\\RuntimeIdentifierGraph.json"
         }
       }
     }

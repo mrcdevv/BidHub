@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "67BiThgSG5y05LRNws4f91rQIG2PvF7qkHTWD4q5B6TX+MghF1f7gqdwG82LH1lGCpnJpbDlG+T7s2BUvhNhzQ==",
+  "dgSpecHash": "AwTzNL1mnyHbcHOkNA19Hlv+m8EKoQJwOZbt155bvSyhnWBmwq1kgCqVNaGeih9fhnc6pF9yNpHOlSXyKXTdOA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mrc\\dev\\CursoBackend-Microservices\\BidHub\\BidHub\\BidHub.csproj",
+  "projectFilePath": "C:\\Users\\mrc\\dev\\CursoBackend-Microservices\\BidHub\\DefaultApproach\\BidHub\\BidHub.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mrc\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.13\\microsoft.aspnetcore.openapi.7.0.13.nupkg.sha512",
     "C:\\Users\\mrc\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",

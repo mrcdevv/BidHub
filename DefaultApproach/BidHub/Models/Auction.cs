@@ -7,7 +7,7 @@ namespace BidHub.Models
 {
     public class Auction
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public int ReservePrice { get; set; }
         public int Seller { get; set; }
         public int Winner { get; set; }
@@ -16,7 +16,7 @@ namespace BidHub.Models
         public int CreatedAt { get; set; }
         public int UpdatedAt { get; set; }
         public int Status { get; set; }
-        public int ItemId { get; set; }
+        public Guid ItemId { get; set; }
         public Item Item { get; set; }
     }
 }
