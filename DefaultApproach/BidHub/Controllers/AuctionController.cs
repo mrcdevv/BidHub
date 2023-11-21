@@ -46,7 +46,7 @@ namespace BidHub.Controllers
         [HttpGet("{id}")]
         public ActionResult<AuctionDto> GetAuctionById(Guid id)
         {
-            Auction? auction = _context.Auctions.FirstOrDefault(a => a.Id == id);
+            Auction? auction = _context.Auctions.Include(a => a.Item).FirstOrDefault(a => a.Id == id);
 
             if (auction != null)
             {
@@ -74,6 +74,15 @@ namespace BidHub.Controllers
             }
 
             return NotFound();
+        }
+
+
+        [HttpPost]
+        public ActionResult<Guid> CreateAuction([FromBody] CreateAuctionDto request)
+        {
+            // TO-DO
+            return Ok();
+
         }
 
 
