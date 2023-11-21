@@ -5809,19 +5809,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mrc\\.nuget\\packages\\": {}
+    "C:\\Users\\admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\mrc\\dev\\CursoBackend-Microservices\\BidHub\\DefaultApproach\\BidHub\\BidHub.csproj",
+      "projectUniqueName": "C:\\Users\\admin\\Desktop\\BidHub\\DefaultApproach\\BidHub\\BidHub.csproj",
       "projectName": "BidHub",
-      "projectPath": "c:\\Users\\mrc\\dev\\CursoBackend-Microservices\\BidHub\\DefaultApproach\\BidHub\\BidHub.csproj",
-      "packagesPath": "C:\\Users\\mrc\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\mrc\\dev\\CursoBackend-Microservices\\BidHub\\DefaultApproach\\BidHub\\obj\\",
+      "projectPath": "C:\\Users\\admin\\Desktop\\BidHub\\DefaultApproach\\BidHub\\BidHub.csproj",
+      "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\admin\\Desktop\\BidHub\\DefaultApproach\\BidHub\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\mrc\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
