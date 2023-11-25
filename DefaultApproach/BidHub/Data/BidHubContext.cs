@@ -10,7 +10,7 @@ namespace BidHub.Models
     public class BidHubContext : DbContext
     {
 
-        public BidHubContext()
+        public BidHubContext(DbContextOptions<BidHubContext> options) : base(options)
         {
             Env.Load();
         }

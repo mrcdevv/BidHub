@@ -14,7 +14,11 @@ namespace BidHub.Controllers
     [Route("api/auctions")]
     public class AuctionController : ControllerBase
     {
-        private readonly BidHubContext _context = new();
+        private readonly BidHubContext _context;
+        public AuctionController(BidHubContext context)
+        {
+            _context = context;
+        }
 
         [HttpGet]
         public ActionResult<List<AuctionDto>> GetAuctions()

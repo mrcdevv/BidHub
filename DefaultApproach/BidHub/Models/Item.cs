@@ -1,10 +1,12 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace BidHub.Models
 {
+    [Table("Items")]
     public class Item
     {
         public Guid Id { get; set; }
@@ -14,6 +16,7 @@ namespace BidHub.Models
         public string Color { get; set; }
         public int Mileage { get; set; }
         public string ImageUrl { get; set; }
+        [ForeignKey("Auction")]
         public Guid AuctionId { get; set; }
         public Auction Auction { get; set; }
     }

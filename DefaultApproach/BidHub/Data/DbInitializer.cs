@@ -23,9 +23,112 @@ public class DbInitializer
             Console.WriteLine("Already have data - no need to seed");
             return;
         }
+        var items = new List<Item>()
+        {
+            new Item
+            {
+                Id = Guid.Parse("08263e85-7e04-40b0-9f76-e89c985df516"),
+                Make = "Ford",
+                Model = "GT",
+                Color = "White",
+                Mileage = 50000,
+                Year = 2020,
+                ImageUrl = "https://cdn.pixabay.com/photo/2016/05/06/16/32/car-1376190_960_720.jpg"
+            },
+
+            new Item
+                {
+                    Id = Guid.Parse("6ad43803-c4e7-41ed-b8ee-5b140de2e40c"),
+                    Make = "Bugatti",
+                    Model = "Veyron",
+                    Color = "Black",
+                    Mileage = 15035,
+                    Year = 2018,
+                    ImageUrl = "https://cdn.pixabay.com/photo/2012/05/29/00/43/car-49278_960_720.jpg"
+                },
+
+            new Item
+                {
+                    Id = Guid.Parse("5e1790a0-a51a-4b32-b041-1e161b690d93"),
+                    Make = "Ford",
+                    Model = "Mustang",
+                    Color = "Black",
+                    Mileage = 65125,
+                    Year = 2023,
+                    ImageUrl = "https://cdn.pixabay.com/photo/2012/11/02/13/02/car-63930_960_720.jpg"
+                },
+            new Item
+                {
+                    Id = Guid.Parse("f94938e3-4dfa-4347-9db6-14d7f91eebc9"),
+                    Make = "Mercedes",
+                    Model = "SLK",
+                    Color = "Silver",
+                    Mileage = 15001,
+                    Year = 2020,
+                    ImageUrl = "https://cdn.pixabay.com/photo/2016/04/17/22/10/mercedes-benz-1335674_960_720.png"
+                }, new Item
+                {
+                    Id = Guid.Parse("68902b0e-b108-4d11-a9ff-f93aca15db9f"),
+                    Make = "BMW",
+                    Model = "X1",
+                    Color = "White",
+                    Mileage = 90000,
+                    Year = 2017,
+                    ImageUrl = "https://cdn.pixabay.com/photo/2017/08/31/05/47/bmw-2699538_960_720.jpg"
+                },new Item
+                {
+                    Id = Guid.Parse("2b57d7c9-1c06-4386-9d75-08c61ee1ce15"),
+                    Make = "Ferrari",
+                    Model = "Spider",
+                    Color = "Red",
+                    Mileage = 50000,
+                    Year = 2015,
+                    ImageUrl = "https://cdn.pixabay.com/photo/2017/11/09/01/49/ferrari-458-spider-2932191_960_720.jpg"
+                },new Item
+                {
+                    Id = Guid.Parse("a1a0086e-8273-44dd-88e0-2b3a00e0daa3"),
+                    Make = "Ferrari",
+                    Model = "F-430",
+                    Color = "Red",
+                    Mileage = 5000,
+                    Year = 2022,
+                    ImageUrl = "https://cdn.pixabay.com/photo/2017/11/08/14/39/ferrari-f430-2930661_960_720.jpg"
+                },new Item
+                {
+                    Id = Guid.Parse("aa08c909-8795-4514-94ca-103c48126e5b"),
+                    Make = "Audi",
+                    Model = "R8",
+                    Color = "White",
+                    Mileage = 10050,
+                    Year = 2021,
+                    ImageUrl = "https://cdn.pixabay.com/photo/2019/12/26/20/50/audi-r8-4721217_960_720.jpg"
+                },new Item
+                {
+                    Id = Guid.Parse("b81fdddb-d7d5-448f-9e1b-6e326e8d1f13"),
+                    Make = "Audi",
+                    Model = "TT",
+                    Color = "Black",
+                    Mileage = 25400,
+                    Year = 2020,
+                    ImageUrl = "https://cdn.pixabay.com/photo/2016/09/01/15/06/audi-1636320_960_720.jpg"
+                },new Item
+                {
+                    Id = Guid.Parse("773e7fb3-628d-4057-8662-a25c50caee7b"),
+                    Make = "Ford",
+                    Model = "Model T",
+                    Color = "Rust",
+                    Mileage = 150150,
+                    Year = 1938,
+                    ImageUrl = "https://cdn.pixabay.com/photo/2017/08/02/19/47/vintage-2573090_960_720.jpg"
+                }
+        };
+
+
+        context.AddRange(items);
+        context.SaveChanges();
 
         var auctions = new List<Auction>()
-    {
+        {
       	    // 1 Ford GT
             new Auction
             {
@@ -34,15 +137,7 @@ public class DbInitializer
                 ReservePrice = 20000,
                 Seller = "bob",
                 AuctionEnd = DateTime.UtcNow.AddDays(10),
-                Item = new Item
-                {
-                    Make = "Ford",
-                    Model = "GT",
-                    Color = "White",
-                    Mileage = 50000,
-                    Year = 2020,
-                    ImageUrl = "https://cdn.pixabay.com/photo/2016/05/06/16/32/car-1376190_960_720.jpg"
-                }
+                ItemId = Guid.Parse("08263e85-7e04-40b0-9f76-e89c985df516")
             },
             // 2 Bugatti Veyron
             new Auction
@@ -52,15 +147,7 @@ public class DbInitializer
                 ReservePrice = 90000,
                 Seller = "alice",
                 AuctionEnd = DateTime.UtcNow.AddDays(60),
-                Item = new Item
-                {
-                    Make = "Bugatti",
-                    Model = "Veyron",
-                    Color = "Black",
-                    Mileage = 15035,
-                    Year = 2018,
-                    ImageUrl = "https://cdn.pixabay.com/photo/2012/05/29/00/43/car-49278_960_720.jpg"
-                }
+                ItemId = Guid.Parse("6ad43803-c4e7-41ed-b8ee-5b140de2e40c")
             },
             // 3 Ford mustang
             new Auction
@@ -69,15 +156,7 @@ public class DbInitializer
                 Status = Status.Live,
                 Seller = "bob",
                 AuctionEnd = DateTime.UtcNow.AddDays(4),
-                Item = new Item
-                {
-                    Make = "Ford",
-                    Model = "Mustang",
-                    Color = "Black",
-                    Mileage = 65125,
-                    Year = 2023,
-                    ImageUrl = "https://cdn.pixabay.com/photo/2012/11/02/13/02/car-63930_960_720.jpg"
-                }
+                ItemId = Guid.Parse("5e1790a0-a51a-4b32-b041-1e161b690d93")
             },
             // 4 Mercedes SLK
             new Auction
@@ -87,15 +166,8 @@ public class DbInitializer
                 ReservePrice = 50000,
                 Seller = "tom",
                 AuctionEnd = DateTime.UtcNow.AddDays(-10),
-                Item = new Item
-                {
-                    Make = "Mercedes",
-                    Model = "SLK",
-                    Color = "Silver",
-                    Mileage = 15001,
-                    Year = 2020,
-                    ImageUrl = "https://cdn.pixabay.com/photo/2016/04/17/22/10/mercedes-benz-1335674_960_720.png"
-                }
+                ItemId = Guid.Parse("f94938e3-4dfa-4347-9db6-14d7f91eebc9"),
+
             },
             // 5 BMW X1
             new Auction
@@ -105,15 +177,8 @@ public class DbInitializer
                 ReservePrice = 20000,
                 Seller = "alice",
                 AuctionEnd = DateTime.UtcNow.AddDays(30),
-                Item = new Item
-                {
-                    Make = "BMW",
-                    Model = "X1",
-                    Color = "White",
-                    Mileage = 90000,
-                    Year = 2017,
-                    ImageUrl = "https://cdn.pixabay.com/photo/2017/08/31/05/47/bmw-2699538_960_720.jpg"
-                }
+                ItemId = Guid.Parse("68902b0e-b108-4d11-a9ff-f93aca15db9f"),
+
             },
             // 6 Ferrari spider
             new Auction
@@ -123,15 +188,7 @@ public class DbInitializer
                 ReservePrice = 20000,
                 Seller = "bob",
                 AuctionEnd = DateTime.UtcNow.AddDays(45),
-                Item = new Item
-                {
-                    Make = "Ferrari",
-                    Model = "Spider",
-                    Color = "Red",
-                    Mileage = 50000,
-                    Year = 2015,
-                    ImageUrl = "https://cdn.pixabay.com/photo/2017/11/09/01/49/ferrari-458-spider-2932191_960_720.jpg"
-                }
+                ItemId = Guid.Parse("2b57d7c9-1c06-4386-9d75-08c61ee1ce15"),
             },
             // 7 Ferrari F-430
             new Auction
@@ -141,15 +198,7 @@ public class DbInitializer
                 ReservePrice = 150000,
                 Seller = "alice",
                 AuctionEnd = DateTime.UtcNow.AddDays(13),
-                Item = new Item
-                {
-                    Make = "Ferrari",
-                    Model = "F-430",
-                    Color = "Red",
-                    Mileage = 5000,
-                    Year = 2022,
-                    ImageUrl = "https://cdn.pixabay.com/photo/2017/11/08/14/39/ferrari-f430-2930661_960_720.jpg"
-                }
+                ItemId = Guid.Parse("a1a0086e-8273-44dd-88e0-2b3a00e0daa3"),
             },
             // 8 Audi R8
             new Auction
@@ -158,15 +207,7 @@ public class DbInitializer
                 Status = Status.Live,
                 Seller = "bob",
                 AuctionEnd = DateTime.UtcNow.AddDays(19),
-                Item = new Item
-                {
-                    Make = "Audi",
-                    Model = "R8",
-                    Color = "White",
-                    Mileage = 10050,
-                    Year = 2021,
-                    ImageUrl = "https://cdn.pixabay.com/photo/2019/12/26/20/50/audi-r8-4721217_960_720.jpg"
-                }
+                ItemId = Guid.Parse("aa08c909-8795-4514-94ca-103c48126e5b"),
             },
             // 9 Audi TT
             new Auction
@@ -176,15 +217,8 @@ public class DbInitializer
                 ReservePrice = 20000,
                 Seller = "tom",
                 AuctionEnd = DateTime.UtcNow.AddDays(20),
-                Item = new Item
-                {
-                    Make = "Audi",
-                    Model = "TT",
-                    Color = "Black",
-                    Mileage = 25400,
-                    Year = 2020,
-                    ImageUrl = "https://cdn.pixabay.com/photo/2016/09/01/15/06/audi-1636320_960_720.jpg"
-                }
+                ItemId = Guid.Parse("b81fdddb-d7d5-448f-9e1b-6e326e8d1f13"),
+
             },
             // 10 Ford Model T
             new Auction
@@ -194,15 +228,7 @@ public class DbInitializer
                 ReservePrice = 20000,
                 Seller = "bob",
                 AuctionEnd = DateTime.UtcNow.AddDays(48),
-                Item = new Item
-                {
-                    Make = "Ford",
-                    Model = "Model T",
-                    Color = "Rust",
-                    Mileage = 150150,
-                    Year = 1938,
-                    ImageUrl = "https://cdn.pixabay.com/photo/2017/08/02/19/47/vintage-2573090_960_720.jpg"
-                }
+                ItemId = Guid.Parse("773e7fb3-628d-4057-8662-a25c50caee7b"),
             }
     };
 

@@ -19,6 +19,7 @@ namespace BidHub.Models
         public decimal? SoldAmount { get; set; }
         public decimal? CurrentHighBid { get; set; }
         public Status Status { get; set; } = Status.Live;
+        public Guid ItemId { get; set; }
         public Item Item { get; set; }
     }
 }
