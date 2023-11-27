@@ -16,7 +16,6 @@ namespace BidHub.Models
         public string Color { get; set; }
         public int Mileage { get; set; }
         public string ImageUrl { get; set; }
-        [ForeignKey("Auction")]
         public Guid AuctionId { get; set; }
         public Auction Auction { get; set; }
     }
